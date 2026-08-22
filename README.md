@@ -6,17 +6,31 @@ This repository presents selected projects that demonstrate how I translate comp
 
 ## Featured Projects
 
-### 1. Stay or Return Decision-Support Platform
+### 1. Stay or Return
 
-A web-based decision-support prototype designed to help Chinese international students evaluate whether to stay in the United States, return to China, or consider another destination.
+**An explainable decision tool for Chinese international students choosing between staying in the U.S. and returning to China.**
 
-I mapped the user decision journey, designed a 28-question assessment across six dimensions, developed the scoring and confidence logic, and used AI-assisted coding tools to build and iterate the frontend prototype.
+[Live Website](https://stayorreturn.com) · [Source Code](https://github.com/Sidbaobao/-](https://github.com/Sidbaobao/stay-or-return-decision-support))
 
-**Key areas:** Product design, user journey, information architecture, scoring logic, AI-assisted prototyping, usability iteration
+Choosing where to build a life is too personal for a black box. Stay or Return breaks the decision into 24 questions across six dimensions, then shows users what is pulling them in each direction and how confident that result really is.
 
-**Tools:** Next.js, TypeScript, Tailwind CSS, localStorage
+The result is based on a transparent weighted-gap model rather than two artificial “scores.” Users can adjust what matters to them, inspect each dimension, test how sensitive the result is to their priorities, and generate a decision memo.
 
-[View Live Demo](https://seven-steel-99.vercel.app/) · [View Repository](https://github.com/Sidbaobao/-)
+#### Highlights
+
+* Six-step questionnaire covering career, finances, immigration, family, lifestyle, and long-term development
+* Interactive bubble-based weighting with fine-grained controls
+* Bipolar result view showing direction, confidence range, key drivers, and uncertain dimensions
+* Local profiles and result history stored only on the user’s device
+* Private sharing through URL fragments, so shared answers never reach the server
+* Anonymous statistics limited to aggregated direction and confidence counts
+* Print-friendly decision memo with a side-by-side comparison
+
+#### Built with
+
+Next.js 15 · TypeScript · Tailwind CSS · d3-hierarchy · Vercel KV · Vercel
+
+Designed and built independently from product definition through deployment, with team collaboration on promotion.aobao/-)
 
 ---
 
