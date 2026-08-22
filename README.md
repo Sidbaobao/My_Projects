@@ -35,17 +35,27 @@ Designed and built independently from product definition through deployment, wit
 
 ### 2. Vehicle–Drone Fulfillment Network Optimization
 
-A data modeling project that converts a vehicle–drone collaborative delivery problem into a multi-node network optimization model.
-
-I used Python and Gurobi to model routing, capacity, endurance, and task-allocation constraints, and compared different operating scenarios using fulfillment time, transportation cost, and equipment utilization. The optimized collaborative solution achieved an estimated 5% improvement in overall efficiency compared with the baseline.
-
-**Key areas:** Business problem decomposition, network optimization, scenario simulation, performance evaluation
-
-**Tools:** Python, Gurobi, machine learning, data visualization
+**A network optimization model for coordinating ground vehicles and delivery drones across a multi-node fulfillment system.**
 
 [View Full Report](./Research%20on%20Optimization%20of%20Urban%20Logistics%20Network%20Based%20on%20Low%20Altitude%20Economy%3A%20Path%20Planning%20and%20Traffic%20Impact%20Analysis%20of%20Collaborative%20Distribution%20Mode%20Between%20Drones%20and%20Ground%20Vehicles)
 
----
+The difficult part of mixed-fleet delivery is not simply whether drones are faster. It is deciding which orders they should handle, how they should coordinate with ground vehicles, and whether that additional complexity creates enough operational value.
+
+I translated the delivery process into a network model covering order locations, travel distance, vehicle capacity, drone endurance, task allocation, and fulfillment time. Python was used to prepare the node and order data, while Gurobi handled the routing and assignment constraints.
+
+The model was tested under different order volumes and fleet configurations. Comparing fulfillment time, transportation cost, and equipment utilization showed that the coordinated solution could improve overall efficiency by approximately 5% over the baseline.
+
+#### Highlights
+
+* Joint routing and task allocation for vehicles and drones
+* Capacity, endurance, distance, and fulfillment-time constraints
+* Multi-scenario comparison across different demand and fleet settings
+* Performance evaluation based on time, cost, and equipment utilization
+* Operational recommendations derived from the model results
+
+#### Built with
+
+Python · Gurobi · pandas · Jupyter Notebook
 
 ### 3. Multi-Modal Accessibility Analysis in Shenzhen
 
