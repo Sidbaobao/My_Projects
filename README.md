@@ -10,8 +10,7 @@ This repository presents selected projects that demonstrate how I translate comp
 
 **An explainable decision tool for Chinese international students choosing between staying in the U.S. and returning to China.**
 
-[Live Website](https://stayorreturn.com) · [Source Code](https://github.com/Sidbaobao/-](https://github.com/Sidbaobao/stay-or-return-decision-support))
-
+[Live Website](https://stayorreturn.com) · [Source Code](https://github.com/Sidbaobao/stay-or-return-decision-support)
 Choosing where to build a life is too personal for a black box. Stay or Return breaks the decision into 24 questions across six dimensions, then shows users what is pulling them in each direction and how confident that result really is.
 
 The result is based on a transparent weighted-gap model rather than two artificial “scores.” Users can adjust what matters to them, inspect each dimension, test how sensitive the result is to their priorities, and generate a decision memo.
@@ -30,7 +29,7 @@ The result is based on a transparent weighted-gap model rather than two artifici
 
 Next.js 15 · TypeScript · Tailwind CSS · d3-hierarchy · Vercel KV · Vercel
 
-Designed and built independently from product definition through deployment, with team collaboration on promotion.aobao/-)
+Designed and built independently from product definition through deployment, with team collaboration on promotion
 
 ---
 
