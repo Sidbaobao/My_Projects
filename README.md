@@ -1,99 +1,101 @@
-# Junxiang Gong — Selected Projects
+Junxiang Gong — Selected Work
 
-Cornell University Master of Regional Planning candidate working across product design, data analysis, optimization, and solution development.
+I am a Master of Regional Planning candidate at Cornell University, interested in AI application products, data-driven decision systems, and enterprise solutions. My work ranges from shipping a privacy-first web product to modeling vehicle-drone delivery and studying urban mobility with machine learning.
 
-Most of my work sits somewhere between understanding a real-world problem and building something that makes the decision easier. Some projects become web products, while others take the form of optimization models, GIS analyses, or decision reports.
+I enjoy the part between identifying a messy real-world problem and turning it into something people can actually use: a product, a model, a map, or a clear recommendation.
 
-## Featured Projects
+Featured Projects
 
-### 1. Stay or Return
+1. Stay or Return
 
-**An explainable decision tool for Chinese international students choosing between staying in the U.S. and returning to China.**
+A transparent decision tool for Chinese international students weighing whether to stay in the U.S. or return to China.
 
-[Live Website](https://stayorreturn.com) · [Source Code](https://github.com/Sidbaobao/stay-or-return-decision-support)
+Live Website · Source Code
 
-Choosing where to build a life is too personal for a black box. Stay or Return breaks the decision into 24 questions across six dimensions, then shows users what is pulling them in each direction and how confident that result really is.
+Stay or Return breaks a deeply personal decision into 24 questions across career, finances, immigration, family, lifestyle, and long-term development. Users decide how much each dimension matters, see what is pulling them in either direction, and leave with a decision memo rather than a black-box recommendation.
 
-The result is based on a transparent weighted-gap model rather than two artificial scores. Users can adjust what matters to them, inspect each dimension, test how sensitive the result is to their priorities, and generate a decision memo.
+The first version displayed “stay” and “return” as separate scores. Because the two values were mathematically complementary, that presentation exaggerated the amount of information in the result. I rebuilt the experience around a single weighted-gap model, with a bipolar scale, confidence range, key drivers, uncertain dimensions, and sensitivity analysis.
 
-#### What it includes
+Designed the product flow, questionnaire, weighting system, scoring explanation, and report
 
-* Six-step questionnaire covering career, finances, immigration, family, lifestyle, and long-term development
-* Interactive bubble-based weighting with fine-grained controls
-* Bipolar result view showing direction, confidence range, key drivers, and uncertain dimensions
-* Local profiles and result history stored only on the user’s device
-* Private sharing through URL fragments, so shared answers never reach the server
-* Anonymous statistics limited to aggregated direction and confidence counts
-* Print-friendly decision memo with a side-by-side comparison
+Built local profiles and a ten-result history without requiring user accounts
 
-**Built with:** Next.js 15 · TypeScript · Tailwind CSS · d3-hierarchy · Vercel KV · Vercel
+Encoded shared results in URL fragments so the server never receives the underlying answers
 
-Designed and built independently from product definition through deployment, with team collaboration on promotion.
+Limited backend statistics to coarse anonymous counts by direction and confidence
 
----
+Reduced the homepage video from 56.4 MB to 2.6 MB and added lazy loading
 
-### 2. Vehicle–Drone Fulfillment Network Optimization
+Built with: Next.js 15 · TypeScript · Tailwind CSS · d3-hierarchy · Vercel KV · Vercel
 
-**A network optimization model for coordinating ground vehicles and delivery drones across a multi-node fulfillment system.**
+Designed and developed independently, with team collaboration on promotion.
 
-[View Full Report](./Research%20on%20Optimization%20of%20Urban%20Logistics%20Network%20Based%20on%20Low%20Altitude%20Economy%3A%20Path%20Planning%20and%20Traffic%20Impact%20Analysis%20of%20Collaborative%20Distribution%20Mode%20Between%20Drones%20and%20Ground%20Vehicles)
+2. Mobility Accessibility and Equity in Manhattan
 
-The difficult part of mixed-fleet delivery is not simply whether drones are faster. It is deciding which orders they should handle, how they should coordinate with ground vehicles, and whether the additional complexity creates enough operational value.
+A machine-learning and spatial analysis of walking access to bus stops, subway entrances, and bike-share stations across Manhattan.
 
-I translated the delivery process into a network model covering order locations, travel distance, vehicle capacity, drone endurance, task allocation, and fulfillment time. Python was used to prepare the node and order data, while Gurobi handled the routing and assignment constraints.
+View Full Report
 
-The model was tested under different order volumes and fleet configurations. Comparing fulfillment time, transportation cost, and equipment utilization showed that the coordinated solution could improve overall efficiency by approximately 5% over the baseline.
+This study asks whether Manhattan’s dense transportation network is equally accessible at the neighborhood level. I combined OpenStreetMap mobility data with ACS socioeconomic estimates and TIGER/Line boundaries for 303 census tracts, covering 3,221 bus stops, subway entrances, and bike-share stations.
 
-#### Model scope
+Walking times were calculated on an OSMnx network with multi-source Dijkstra shortest paths. I then used robust scaling and K-means clustering to identify four accessibility patterns, followed by mode-specific OLS models with spatial-lag controls to test how those patterns relate to poverty, population density, race, and commuting behavior.
 
-* Joint routing and task allocation for vehicles and drones
-* Capacity, endurance, distance, and fulfillment-time constraints
-* Multi-scenario comparison across different demand and fleet settings
-* Performance evaluation based on time, cost, and equipment utilization
-* Operational recommendations derived from the model results
+Built a tract-level dataset from three public data sources
 
-**Built with:** Python · Gurobi · pandas · Jupyter Notebook
+Measured network-based walking time instead of straight-line proximity
 
----
+Used K-means to identify four mobility-access typologies
 
-### 3. Multi-Modal Accessibility Analysis in Shenzhen
+Found persistent access gaps along river-edge tracts and weaker subway access in East Harlem
 
-**A GIS-based study of how easily people can reach essential services by walking, cycling, driving, and public transport.**
+Found that poverty was associated with longer access times for buses and subways, while racial composition was not statistically significant in the models
 
-[View Full Report](./A%20Multi-Modal%20Accessibility%20Analysis%20of%20Essential%20Services%20in%20Shenzhen_Junxiang%20Gong_jg2582.pdf)
+Methods: Python · OSMnx · GeoPandas · Network Analysis · K-means Clustering · Spatial Regression
 
-A facility may look close on a map and still be difficult to reach once street connections, travel modes, and station entrances are taken into account. This project examines that difference across Shenzhen Bay, Qianhai, and Houhai.
+3. Vehicle–Drone Fulfillment Network Optimization
 
-I combined origin points, road networks, public transport stops, station entrances, and the locations of hospitals, schools, and parks. Separate accessibility measurements were created for each travel mode and compared against 15-minute service thresholds.
+A routing and task-allocation model for coordinating ground vehicles and delivery drones in a multi-node fulfillment network.
 
-The results revealed clear differences between facility types and neighborhoods. Parks generally had stronger coverage, while access to hospitals was the most limited. The final maps were used to identify underserved locations and suggest where transport connections or public-service provision could be improved.
+View Full Report
 
-#### Analysis
+The project compares three ways to serve the same 50-customer network: vehicles only, drones only, and a coordinated mixed fleet. I modeled capacity, range, travel distance, service time, cost, and task allocation, then designed a hybrid solution method combining mixed-integer linear programming, nearest-neighbor initialization, a genetic algorithm, and Gurobi warm starts.
 
-* Combined transport, facility, and spatial data from multiple sources
-* Compared accessibility across four travel modes
-* Measured service coverage using mode-specific travel assumptions
-* Identified gaps in hospital, school, and park access
-* Turned the analysis into maps and location-specific recommendations
+In the Shenzhen case study, the coordinated model assigned high-demand areas to vehicles and scattered or remote orders to drones. Compared with vehicle-only delivery, it reduced completion time by 42%, vehicle travel distance by 16%, and total cost by 2%. The composite efficiency measure improved by 4% over vehicle-only delivery and 5% over drone-only delivery.
 
-**Built with:** ArcGIS Pro · Network Analysis · Spatial Analysis · Data Visualization
+Formulated CVRP, UAVRP, and coordinated vehicle-drone scenarios
 
----
+Built capacity, endurance, routing, and assignment constraints
 
-## Other Research and Planning Work
+Combined exact optimization with heuristic search for a practical solve process
 
-* [Strategic Analysis of the 15-Minute City in China](./Strategic%20analysis%20on%20improving%20the%20proximity%20and%20accessibility%20in%20China%20an%20exploratory%20development%20based%20on%20the%20study%20of%20the%2015-minute%20city.pdf)
-* [Classen Corridor Transit-Oriented Development Plan](./%EF%BC%88%E5%B7%B2%E5%8E%8B%E7%BC%A9%EF%BC%89Classen%20Corridor%20Transit-Oriented%20Development%20Plan%20Oklahoma%20City,%20OK.pdf)
-* [Haikou Mission Hills Community Satisfaction Research](./Research%20on%20Overall%20Satisfaction%20of%20Haikou%20Mission%20Hills%20New%20CityCommunity%20-%20From%20The%20Perspectives%20of%20Residents%20And%20Tourists.pdf)
+Compared time, distance, cost, and fleet utilization across operating models
 
-## Toolkit
+Built with: Python · Gurobi · Mixed-Integer Linear Programming · Genetic Algorithm · pandas
 
-* **Product:** User research, requirements, information architecture, prototyping, usability testing
-* **Data and optimization:** Python, SQL, Gurobi, pandas, statistical analysis, Excel
-* **Spatial analysis:** ArcGIS Pro, network analysis, accessibility analysis, spatial visualization
-* **Frontend:** Next.js, TypeScript, Tailwind CSS, Vercel
-* **Communication:** Industry research, structured problem-solving, presentation development, Chinese and English
+Additional Research and Planning Work
 
-## Current Focus
+Multi-Modal Accessibility Analysis in Shenzhen — Compared access to hospitals, schools, and parks by walking, cycling, driving, and public transit across Shenzhen Bay, Qianhai, and Houhai.
 
-I am interested in 2027 graduate opportunities in AI application products, enterprise solutions, product strategy, business analysis, and technology consulting.
+Shamian Historic District Signage Design Guidelines — Selected contribution to a 256-page implementation guide covering sign placement, dimensions, materials, color, lighting, approval, and ongoing supervision across 157 buildings in Guangzhou’s Shamian Historic District.
+
+Strategic Analysis of the 15-Minute City in China — An exploratory study of proximity, accessibility, and implementation strategies for 15-minute-city development in China.
+
+Classen Corridor Transit-Oriented Development Plan — A corridor-scale TOD proposal connecting land use, street design, mobility, and public-realm improvements in Oklahoma City.
+
+Haikou Mission Hills Community Satisfaction Research — Survey-based research comparing how residents and visitors experience a tourism-oriented new community.
+
+Toolkit
+
+Product and AI-assisted development: User research, requirements, information architecture, prototyping, usability testing, Next.js, TypeScript
+
+Data and machine learning: Python, SQL, pandas, clustering, regression, statistical analysis, data visualization
+
+Optimization: Gurobi, mixed-integer linear programming, routing models, heuristic algorithms, scenario analysis
+
+Spatial analytics: ArcGIS Pro, OSMnx, GeoPandas, network analysis, accessibility analysis
+
+Communication: Industry research, structured problem-solving, client-facing reports, presentation development, Chinese and English
+
+Current Focus
+
+I am exploring 2027 graduate opportunities in AI application products, enterprise solutions, product strategy, business analysis, and technology consulting.
