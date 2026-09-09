@@ -14,7 +14,8 @@ This repository is the index of my work.  Code lives in its own repositories; re
 | 2 | [Truck–drone collaborative delivery](#2-truckdrone-collaborative-delivery) | MILP + genetic-algorithm routing model, Shenzhen case study | [code](https://github.com/Sidbaobao/low-altitude-vrpd) · [paper](reports/low-altitude-logistics-vrpd.pdf) |
 | 3 | [Mobility access and equity in Manhattan](#3-mobility-access-and-equity-in-manhattan) | Network analysis, clustering and spatial regression over 303 census tracts | [code](https://github.com/Sidbaobao/manhattan-mobility-access) · [report](reports/manhattan-mobility-access.pdf) |
 | 4 | [Multi-modal accessibility in Shenzhen](#4-multi-modal-accessibility-of-essential-services-in-shenzhen) | GIS network analysis of hospital, school and park access by four modes | [code](https://github.com/Sidbaobao/shenzhen-multimodal-accessibility) · [report](reports/shenzhen-multimodal-accessibility.pdf) |
-| 5 | [Planning reports](#5-planning-and-research-reports) | TOD plan, historic-district design guidelines, 15-minute city, community research | [`reports/`](reports/) |
+| 5 | [Hainan rainforest story map](#5-hainan-tropical-rainforest-national-park-story-map) | First Prize, 2024 Esri China GIS Development Competition (team of 4): five-chapter story map with a Landsat ecological-index assessment | [read](https://sidbaobao.github.io/hainan-rainforest-storymap/) · [code](https://github.com/Sidbaobao/hainan-rainforest-storymap) |
+| 6 | [Planning reports](#6-planning-and-research-reports) | TOD plan, historic-district design guidelines, 15-minute city, community research | [`reports/`](reports/) |
 
 ---
 
@@ -100,7 +101,24 @@ car and metro access for every neighbourhood.
 
 *ArcGIS Pro · Network Analyst · OD cost matrix · Python (pandas, matplotlib).*
 
-## 5. Planning and research reports
+## 5. Hainan Tropical Rainforest National Park story map
+
+**绿海唤猿啼，和谐多样栖 — First Prize, 2024 Esri China (GeoScene) GIS Development Competition,
+Map Story track.**  Team A661, Hainan University (four members, two advisors).
+[read it page by page](https://sidbaobao.github.io/hainan-rainforest-storymap/) ·
+[repository](https://github.com/Sidbaobao/hainan-rainforest-storymap)
+
+Five chapters — the Hainan gibbon, the rainforest, the national park and its wildlife, Li and Miao
+culture, and the park's ecological history — told through web maps, 3-D web scenes and swipe
+comparisons.  Chapter 5 builds a remote-sensing ecological index (greenness, wetness, heat,
+dryness; Landsat 5, 1987 vs 2007, Google Earth Engine) and finds the share of the park in the
+top two ecological grades rising from 71 % to 89 %.  The original GeoScene Online items are no
+longer public; the repository preserves all 103 pages, the recorded walkthrough and clips of
+every interactive map.
+
+*GeoScene Pro / Online · Google Earth Engine · Landsat 5, MODIS, ASTER GDEM · Python.*
+
+## 6. Planning and research reports
 
 | Report | Topic |
 |---|---|
