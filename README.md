@@ -112,7 +112,10 @@ Five chapters — the Hainan gibbon, the rainforest, the national park and its w
 culture, and the park's ecological history — told through web maps, 3-D web scenes and swipe
 comparisons.  Chapter 5 builds a remote-sensing ecological index (greenness, wetness, heat,
 dryness; Landsat 5, 1987 vs 2007, Google Earth Engine) and finds the share of the park in the
-top two ecological grades rising from 71 % to 89 %.  The original GeoScene Online items are no
+top two ecological grades rising from 71 % to 89 %.  My part was the mapping and the analysis:
+the web maps and 3-D web scenes (DEM terrain scene, rainforest-cover extraction, park boundary,
+wildlife and sub-area maps, the heritage-site scene), the RSEI workflow and the 1984–2024
+vegetation-change analysis in Google Earth Engine.  The original GeoScene Online items are no
 longer public; the repository preserves all 103 pages, the recorded walkthrough and clips of
 every interactive map.
 
