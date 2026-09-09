@@ -13,7 +13,7 @@ This repository is the index of my work.  Code lives in its own repositories; re
 | 1 | [Stay or Return](#1-stay-or-return) | Explainable decision tool for Chinese international students — a live web product | [live](https://stayorreturn.com) · [code](https://github.com/Sidbaobao/stay-or-return-decision-support) |
 | 2 | [Truck–drone collaborative delivery](#2-truckdrone-collaborative-delivery) | MILP + genetic-algorithm routing model, Shenzhen case study | [code](https://github.com/Sidbaobao/low-altitude-vrpd) · [paper](reports/low-altitude-logistics-vrpd.pdf) |
 | 3 | [Mobility access and equity in Manhattan](#3-mobility-access-and-equity-in-manhattan) | Network analysis, clustering and spatial regression over 303 census tracts | [code](https://github.com/Sidbaobao/manhattan-mobility-access) · [report](reports/manhattan-mobility-access.pdf) |
-| 4 | [Multi-modal accessibility in Shenzhen](#4-multi-modal-accessibility-of-essential-services-in-shenzhen) | GIS network analysis of hospital, school and park access by four modes | [report](reports/shenzhen-multimodal-accessibility.pdf) |
+| 4 | [Multi-modal accessibility in Shenzhen](#4-multi-modal-accessibility-of-essential-services-in-shenzhen) | GIS network analysis of hospital, school and park access by four modes | [code](https://github.com/Sidbaobao/shenzhen-multimodal-accessibility) · [report](reports/shenzhen-multimodal-accessibility.pdf) |
 | 5 | [Planning reports](#5-planning-and-research-reports) | TOD plan, historic-district design guidelines, 15-minute city, community research | [`reports/`](reports/) |
 
 ---
@@ -92,7 +92,7 @@ race and commuting.
 
 **How evenly can residents of Shenzhen Bay, Qianhai and Houhai reach hospitals, schools and
 parks by walking, cycling, driving and metro?**
-[report](reports/shenzhen-multimodal-accessibility.pdf)
+[code](https://github.com/Sidbaobao/shenzhen-multimodal-accessibility) · [report](reports/shenzhen-multimodal-accessibility.pdf)
 
 An ArcGIS Pro network analysis that measures travel time from residential hexagons to the
 nearest hospital, school and park by four modes, then quantifies the "privilege gap" between
