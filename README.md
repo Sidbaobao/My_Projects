@@ -41,7 +41,7 @@ range, key drivers, uncertain dimensions and a sensitivity analysis.
 - Backend statistics limited to coarse anonymous counts by direction and confidence
 - Homepage video cut from 56.4 MB to 2.6 MB with lazy loading
 
-*Next.js 15 · TypeScript · Tailwind CSS · d3-hierarchy · Vercel KV · Vercel.*  Designed and
+*Next.js 15 · TypeScript · Tailwind CSS · d3-hierarchy · Upstash Redis · Vercel.*  Designed and
 developed independently; team collaboration on promotion.
 
 ## 2. Truck–drone collaborative delivery
@@ -95,9 +95,15 @@ race and commuting.
 parks by walking, cycling, driving and metro?**
 [code](https://github.com/Sidbaobao/shenzhen-multimodal-accessibility) · [report](reports/shenzhen-multimodal-accessibility.pdf)
 
-An ArcGIS Pro network analysis that measures travel time from residential hexagons to the
+An ArcGIS Pro network analysis that measures travel time from 77 residential hexagons to the
 nearest hospital, school and park by four modes, then quantifies the "privilege gap" between
 car and metro access for every neighbourhood.
+
+- Reaching a hospital takes 4.2 min by car but 22.9 min by metro and 29.8 min on foot — the
+  same trip costs a car-free household roughly five times as long
+- The gap is widest for the service where it matters most: **70 % of neighbourhoods face a
+  metro-vs-car gap above 15 minutes for hospitals**, against 56 % for parks and 29 % for schools
+- Figures are regenerated from the published travel-time tables by `scripts/make_figures.py`
 
 *ArcGIS Pro · Network Analyst · OD cost matrix · Python (pandas, matplotlib).*
 
@@ -126,7 +132,7 @@ every interactive map.
 | Report | Topic |
 |---|---|
 | [Classen Corridor transit-oriented development plan](reports/classen-corridor-tod-plan.pdf) | Corridor-scale TOD proposal for Oklahoma City connecting land use, street design, mobility and the public realm |
-| [Shamian Historic District signage design guidelines (excerpt)](reports/shamian-signage-guidelines-excerpt.pdf) | Selected contribution to a 256-page implementation guide covering sign placement, materials, lighting and approval for 157 buildings in Guangzhou |
+| [Shamian Historic District signage design guidelines](reports/shamian-signage-guidelines-excerpt.pdf) | The 256-page implementation guide covering sign placement, materials, lighting and approval for 157 buildings in Guangzhou's Shamian Historic District, issued in July 2024 by the Liwan District Bureau of Planning and Natural Resources with the Guangzhou Urban Planning & Design Survey Research Institute. I contributed to it as an intern at the institute's Liwan Branch |
 | [The 15-minute city in China](reports/15-minute-city-china.pdf) | Exploratory study of proximity, accessibility and implementation strategies |
 | [Haikou Mission Hills community satisfaction](reports/haikou-mission-hills-satisfaction.pdf) | Survey research comparing how residents and visitors experience a tourism-oriented new community |
 
